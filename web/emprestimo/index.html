@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguardando resposta da API</title>
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body>
+    <section id="cadastro" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Cadastro de Emprestimo</h2>
+                <button>X</button>
+            </div>
+            <form>
+                <input type="text" placeholder="RA do Aluno" name="alunoRa" required>
+                <input type="number" placeholder="Id do Livro" name="livroId" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+    <header>
+        <h1>Aguardando resposta da API</h1>
+        <nav>
+            <ul>
+                <li><a href="../livro">Livros</a></li>
+                <li><a href="../aluno/">Alunos</a></li>
+                <li><a href="../emprestimo/">Emprestimos</a></li>
+            </ul>
+            <button>Cadastrar</button>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="9">Lista de Emprestimos</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Aluno RA</th>
+                    <th>Livro ID</th>
+                    <th colspan="2">Retirada</th>
+                    <th colspan="2">Devolução</th>
+                    <th>Multa</th>
+                    <th>Detalhes</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <footer>By João Leite</footer>
+    <section id="detalhes" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Detahes do Emprestimo</h2>
+                <button>X</button>
+            </div>
+            <form>
+                <label for="id">Id</label>
+                <input type="number" placeholder="Id" name="id" disabled>
+                <label for="alunoRa">RA do Aluno</label>
+                <input type="text" placeholder="RA do Aluno" name="alunoRa" required>
+                <input type="text" name="aluno" disabled>
+                <label for="livroId">Id do Livro</label>
+                <input type="number" placeholder="Id do Livro" name="livroId" required>
+                <input type="text" name="livro" disabled>
+                <label for="retirada">Retirada</label>
+                <input type="datetime-local" placeholder="Retirada" name="retirada" required>
+                <label for="devolucao">Devolução</label>
+                <input type="datetime-local" placeholder="Devolução" name="devolucao">
+                <label for="multa">Multa</label>
+                <input type="number" step="0.02" placeholder="Multa" name="multa">
+                <button type="submit">Atualizar</button>
+            </form>
+            <button onclick="excluir()">Excluir</button>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

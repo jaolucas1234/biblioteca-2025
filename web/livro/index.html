@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguardando resposta da API</title>
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/main2.css">
+</head>
+
+<body>
+    <section id="cadastro" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Cadastro de Livro</h2>
+                <button>X</button>
+            </div>
+            <form>
+                <input type="text" placeholder="Título" name="titulo" required>
+                <input type="text" placeholder="Autor" name="autor" required>
+                <input type="text" placeholder="Prateleira" name="prateleira" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+    <header>
+        <h1>Aguardando resposta da API</h1>
+        <nav>
+            <ul>
+                <li><a href="../livro">Livros</a></li>
+                <li><a href="../aluno/">Alunos</a></li>
+                <li><a href="../emprestimo/">Emprestimos</a></li>
+            </ul>
+            <button>Cadastrar</button>
+        </nav>
+    </header>
+    <main>
+    </main>
+    <footer>By João Leite</footer>
+    <section id="detalhes" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Detahes do Livro</h2>
+                <button>X</button>
+            </div>
+            <form>
+                <input type="text" placeholder="Id" name="id" disabled>
+                <input type="text" placeholder="Título" name="titulo" required>
+                <input type="text" placeholder="Autor" name="autor" required>
+                <input type="text" placeholder="Prateleira" name="prateleira" required>
+                <button type="submit">Atualizar</button>
+            </form>
+            <button onclick="excluir()">Excluir</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="6">Emprestimos</th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>RA</th>
+                        <th>Aluno</th>
+                        <th>Telefone</th>
+                        <th>Retirada</th>
+                        <th>Devolução</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>
